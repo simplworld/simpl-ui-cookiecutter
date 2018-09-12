@@ -3,7 +3,6 @@ import {finalCreateStoreFactory} from 'simpl/lib/stores';
 
 import rootReducer from '../reducers/combined/appReducers';
 
-
 export default function configureStore(initialState, node_env) {
   const finalCreateStore = finalCreateStoreFactory(node_env || process.env.NODE_ENV);
   const store = finalCreateStore(rootReducer, initialState);
