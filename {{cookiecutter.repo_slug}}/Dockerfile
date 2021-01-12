@@ -1,6 +1,6 @@
 FROM python:3.6
 
-LABEL Description="Image for {{cookiecutter.repo_slug}}" Vendor="Wharton" Version="{{ cookiecutter.version }}"
+LABEL Description="Image for {{cookiecutter.repo_slug}}" Vendor="Simpl" Version="{{ cookiecutter.version }}"
 
 ENV PYTHONUNBUFFERED 1
 
