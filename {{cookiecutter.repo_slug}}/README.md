@@ -1,14 +1,6 @@
 # {{ cookiecutter.project_name }}
 
-## Python Setup (assumes Python >= 3.6, simpl-games-api and {{ cookiecutter.modelservice_slug }} servers running)
-
-```shell
-$ cd {{ cookiecutter.repo_slug }}
-$ mkvirtualenv {{ cookiecutter.modelservice_slug }}
-
-$ pip install -r requirements.txt
-$ ./manage.py migrate
-```
+## Python Setup (assumes Python 3.6, simpl-games-api and {{ cookiecutter.modelservice_slug }} servers running)
 
 ## Local Docker Setup
 
@@ -28,6 +20,16 @@ this will create the Docker image and run it.
 
 ## Local Setup Without Docker
 
+### Install Python dependencies and create a SQLite database
+```shell
+$ cd {{ cookiecutter.repo_slug }}
+$ mkvirtualenv {{ cookiecutter.modelservice_slug }}
+$ pip install -r requirements.txt
+$ ./manage.py migrate
+```
+
+### Run front end
+
 ```shell
 $ ./manage.py runserver 0.0.0.0:8000
 ```
@@ -41,7 +43,7 @@ var AUTOBAHN_DEBUG = true;
 Which will turn on verbose debugging of the Autobahn/Websockets to help debug interactions between the browser and model
 service backend. If you do this, do NOT commit this change.
 
-Update node_modules and run Gulp to compile JS
+In a separate terminal, update node_modules and run Gulp to compile JS
 
 ```shell
 $ cd to {{cookiecutter.repo_slug}} directory
