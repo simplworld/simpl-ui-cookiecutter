@@ -2,8 +2,6 @@ FROM gladiatr72/just-tini:latest as tini
 
 FROM revolutionsystems/python:3.6.9-wee-optimized-lto
 
-LABEL Description="Image for {{cookiecutter.repo_slug}}" Vendor="Simpl" Version="0.1.0"
-
 ENV PYTHONUNBUFFERED 1
 
 RUN mkdir /code
