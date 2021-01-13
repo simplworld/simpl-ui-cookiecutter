@@ -34,3 +34,5 @@ ENV MODEL_SERVICE_WS ws://localhost:8080/ws
 
 EXPOSE 8000
 CMD /code/bootstrap.sh
+
+LABEL Description="Image for {{cookiecutter.repo_slug}}" Vendor="Simpl" Version="0.0.1"
